@@ -1,28 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+// override bootstrap button
+$base-color: orange;
+$base-color-hover: #632b1d;
+.btn-primary {
+  background-color: $base-color;
+  outline: $base-color;
+}
+.btn-primary:disabled {
+  color: #fff;
+  background-color: #989898;
+  border-color: #989898;
+}
+.btn-primary:focus {
+  background-color: $base-color;
+  outline: $base-color;
+}
+.btn-outline-primary:hover {
+  background-color: $base-color;
+  outline: $base-color;
+}
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 50%);
+}
+.btn-outline-primary {
+  color: $base-color;
+  border-color: $base-color;
+}
+.text-primary {
+  color: $base-color;
+}
+.btn-primary:hover {
+  background-color: $base-color-hover;
+  outline: $base-color;
+}
+.fs-15 {
+  font-size: 15px;
+}
+.text.justify {
+  text-align: justify;
+}
+
+.text-right {
+  text-align: right;
 }
 </style>
